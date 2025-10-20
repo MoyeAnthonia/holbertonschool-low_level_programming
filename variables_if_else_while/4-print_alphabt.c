@@ -11,9 +11,9 @@ int main(void)
 {
 char myChar;
 
-for (myChar = 'a'; myChar <= 'z'; myChar++ )
+for (myChar = 'a'; myChar <= 'z'; myChar++)
 {
-if(myChar != 'q' && myChar != 'e')
+if (myChar != 'q' && myChar != 'e')
 {
 putchar(myChar);
 }
