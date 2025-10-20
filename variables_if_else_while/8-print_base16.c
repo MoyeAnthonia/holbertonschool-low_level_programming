@@ -17,7 +17,8 @@ if (myNumbers < 10)
 {
 putchar(myNumbers + '0');
 }
-else{
+else
+{
 putchar(myNumbers - 10 + 'a');
 }
 }
