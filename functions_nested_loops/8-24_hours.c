@@ -3,7 +3,6 @@
 /**
  * jack_bauer - print every minit of Jack Bauer's day
  */
-
 void jack_bauer(void)
 {
 int hour, minute;
