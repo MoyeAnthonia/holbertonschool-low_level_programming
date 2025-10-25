@@ -13,7 +13,7 @@ void print_numbers(void)
 {
 int count;
 
-for (count = 0; count < 9; count++)
+for (count = 0; count < 10; count++)
 {
 _putchar(count);
 }
