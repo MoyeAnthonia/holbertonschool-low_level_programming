@@ -3,7 +3,7 @@
 /**
  * _isupper - function that checks for uppercase character.
  * @c: The character to check.
-
+ *
 * Description: This function checks whether the character code
 * passed as an argument corresponds to an uppercase letter (A–Z).
 *
