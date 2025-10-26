@@ -2,7 +2,7 @@
 
 /**
  * print_square -  function that  prints a square in the terminal.
- * @n: The number of times the character # should be printed.
+ * @size: The number of times the character # should be printed.
  *
 * Description: If n is 0 or less, prints only a newline.
 *
