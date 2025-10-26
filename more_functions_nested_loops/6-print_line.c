@@ -2,22 +2,21 @@
 
 /**
  * print line -  function that draws a straight line in the terminal.
- * followed by a new line.
+ * @n: The number of times the character _ should be printed.
  *
-* Description: function that draws a straight line in the terminal.
+*Description: If n is 0 or less, prints only a newline.
 *
-* Return: 1 
 */
 void print_line(int n)
 {
 int i;
-if (n <= 0)
+if (n <= 0 || n == 0)
 {
-    _putchar('\n');
+_putchar('\n');
 }
 else
 {
-for (i = 0; i >= n; i++ ) 
+for (i = 0; i >= n; i++)
 {
 _putchar('-');
 }
