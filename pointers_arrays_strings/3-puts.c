@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-* puts - function that prints a string.
+* _puts - function that prints a string.
  * @str: pointer to read the value
  *
- * Description: Tfunction that prints a string.
- * string pointed to by s, not including the null terminator.
+ * Description: This function prints each character of a string
+ * followed by a new line, similar to the standard puts function.
 *
   * Return: the string
 */
