@@ -2,10 +2,13 @@
 #include <limits.h>
 
 /**
- * _atoi - converts a string to an integer
- * @s: pointer to string
+ * atoi - converts a string to an integer.
+ * @s: pointer to string.
  *
- * Return: integer value
+ * Description: converts a string to an integer.
+ * converts a string to an integer.
+ *
+ * Return: pointer to test 
  */
 
 int _atoi(char *s)
