@@ -1,19 +1,54 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 /**
-* main - program that adds positive numbers.
+ * is_number - checks if a string contains only digits
+ * @str: string to check
+ *
+ * Return: 1 if all digits, 0 otherwise
+ */
+int is_number(char *str)
+{
+int i = 0;
+if (str[0] == '\0')
+return (0);
+while (str[i])
+{
+if (!isdigit(str[i]))
+return (0);
+i++;
+}
+return (1);
+}
+
+/**
+ * main - program that adds positive numbers
  * @argc: number of commands
  * @argv: array of commands
  *
- * Return: 0 always
+ * Return: 0 if success, 1 if error
  */
 int main(int argc, char *argv[])
 {
-int i;
-for (i = 0; i < argc; i++)
+int i, num, sum = 0;
+if (argc == 1)
 {
-printf("%s\n", argv[i]);
+printf("0\n");
+return (0);
 }
+for (i = 1; i < argc; i++)
+{
+if (!is_number(argv[i]))
+{
+printf("Error\n");
+return (1);
+}
+num = atoi(argv[i]);
+sum += num;
+}
+
+printf("%d\n", sum);
 return (0);
 }
