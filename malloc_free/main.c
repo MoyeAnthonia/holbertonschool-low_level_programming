@@ -1,5 +1,7 @@
 #include "main.h"
-#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
  * main - check the code
  *
@@ -7,13 +9,15 @@
  */
 int main(void)
 {
-    int a;
-    int b;
+    char *s;
 
-    a = 98;
-    b = 42;
-    printf("a=%d, b=%d\n", a, b);
-    swap_int(&a, &b);
-    printf("a=%d, b=%d\n", a, b);
+    s = _strdup("Duplicated");
+    if (s == NULL)
+    {
+        printf("failed to allocate memory\n");
+        return (1);
+    }
+    printf("%s\n", s);
+    free(s);
     return (0);
 }
