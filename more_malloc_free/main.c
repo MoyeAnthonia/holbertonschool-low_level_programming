@@ -7,13 +7,14 @@
  */
 int main(void)
 {
-    int a;
-    int b;
+  char *result;
 
-    a = 98;
-    b = 42;
-    printf("a=%d, b=%d\n", a, b);
-    swap_int(&a, &b);
-    printf("a=%d, b=%d\n", a, b);
+    result = string_nconcat("Best ", "School", 3);
+    if (result == NULL)
+        return (1);
+
+    printf("%s\n", result);  /* Output: Best Sch */
+
+    free(result);  /* Always free allocated memory */
     return (0);
 }
