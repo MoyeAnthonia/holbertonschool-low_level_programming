@@ -1,5 +1,5 @@
-#include "main.h"
 #include <string.h>
+#include "dog.h"
 /**
  * main - check the code
  *
@@ -7,14 +7,12 @@
  */
 int main(void)
 {
-  char *result;
+   struct dog my_dog;
 
-    result = string_nconcat("Best ", "School", 3);
-    if (result == NULL)
-        return (1);
+    init_dog(&my_dog, "Buddy", 3.5, "Tonia");
 
-    printf("%s\n", result);  /* Output: Best Sch */
+    printf("Name: %s\nAge: %.1f\nOwner: %s\n",
+           my_dog.name, my_dog.age, my_dog.owner);
 
-    free(result);  /* Always free allocated memory */
     return (0);
 }
