@@ -5,7 +5,7 @@
 /**
  * array_range - function that concatenates two strings.
  * @min: the first array.
- * @max: the second array. 
+ * @max: the second array.
  *
  * Return: 0
  */

@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * calloc - function that allocates memory for an array, using malloc.
+ * _calloc - function that allocates memory for an array, using malloc.
  * @nmemb: the colloection of array.
  * @size: the size of array.
  *
