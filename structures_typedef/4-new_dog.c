@@ -2,8 +2,10 @@
 #include "dog.h"
 #include <stdio.h>
 /**
- * print_dog - function that prints a struct
- * @d: The struct of the dog
+ * new_dog - function that prints a struct
+ * @name: The name of the dog
+ * @age: The age of the dog
+ * @owner: The owner of the dog
  *
  * Return: 0
  */
@@ -11,14 +13,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *d;
 int i, len;
-
 d = malloc(sizeof(dog_t));
 if (!d)
 return (NULL);
-	
 if (name)
 {
-for (len = 0; name[len]; len++);
+for (len = 0; name[len]; len++)
+;
 d->name = malloc(len + 1);
 if (!d->name)
 {
@@ -32,7 +33,8 @@ else
 d->name = NULL;
 if (owner)
 {
-for (len = 0; owner[len]; len++);
+for (len = 0; owner[len]; len++)
+;
 d->owner = malloc(len + 1);
 if (!d->owner)
 {
