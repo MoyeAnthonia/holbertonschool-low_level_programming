@@ -8,14 +8,14 @@
 * @size: number of element in the array
 * @cmp: the pointer function to use
 *
-* return 1 for integer
+* Description: return 1 for integer
 */
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
 int i;
 if (cmp == NULL || array == NULL)
-return (0);
+return (-1);
 if (size <= 0)
 return (-1);
 for (i = 0; i < size; i++)
