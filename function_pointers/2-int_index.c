@@ -3,12 +3,14 @@
 #include <stddef.h>
 
 /**
-* int_index - function that searches for an integer in an array.
+* int_index - function that searches for an integer.
 * @array: the array to print
 * @size: number of element in the array
 * @cmp: the pointer function to use
 *
-* Description: return 1 for integer
+* Return: index of the first element for which cmp does not return 0
+*
+*
 */
 
 int int_index(int *array, int size, int (*cmp)(int))
@@ -21,7 +23,7 @@ return (-1);
 for (i = 0; i < size; i++)
 {
 if (cmp(array[i]))
-return (1);
+return (i);
 }
 return (-1);
 }
