@@ -32,6 +32,6 @@ if (buffer == NULL)
 close(fd);
 return (0);
 };
-
+ return 0;
 }
 
