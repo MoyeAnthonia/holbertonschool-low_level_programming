@@ -23,7 +23,7 @@ return (0);
 /**Open file and check for errors*/
 fd = open(filename, O_RDONLY);
 if (fd == -1)
-return (-1);
+return (0);
 
 /**allocate memory*/
 buffer = malloc(sizeof(char) * letters);
@@ -51,6 +51,5 @@ return (0);
 
 free(buffer);
 close(fd);
-return(bytes_written);
+return (bytes_written);
 }
-
