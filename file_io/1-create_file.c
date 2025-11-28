@@ -17,7 +17,7 @@ size_t len = 0;
 ssize_t bytes_written;
 
 if (filename == NULL)
-return (0);
+return (-1);
 
 /**check length*/
 if (text_content)
