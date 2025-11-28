@@ -7,17 +7,27 @@
  *
  * Return: Always 0.
  */
-int main(int ac, char **av)
+int main(int argc, char *argv[])
 {
-     int res;
+    int res;
+    char *filename;
+    char *content = NULL;
 
-    if (ac != 3)
+    if (argc < 2)
     {
-        dprintf(2, "Usage: %s filename text\n", av[0]);
-        exit(1);
+        printf("-1\n");
+        return 0;
     }
-    res = create_file(av[1], av[2]);
-    printf("-> %i)\n", res);
-    return (0);
 
+    filename = argv[1];
+
+
+    if (argc >= 3)
+        content = argv[2];
+
+    res = create_file(filename, content);
+
+    printf("%d\n", res);
+
+    return 0;
 }
