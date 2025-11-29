@@ -12,7 +12,7 @@
 */
 int main(int argc, char *argv[])
 {
-int fd_from, fd_to, c_from, c_to;
+int fd_from, fd_to;
 ssize_t r, w;
 char buffer[1024];
 
@@ -59,19 +59,5 @@ close(fd_to);
 exit(98);
 }
 
-/** Close file */
-c_from = close(fd_from)
-if (c_from == -1)
-{
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
-exit(100);
-}
-
-c_to = close(fd_to);
-if (c_to == -1)
-{
-dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
-exit(100);
-}
 return (0);
 }
