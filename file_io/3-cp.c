@@ -13,8 +13,7 @@
 int main(int argc, char *argv[])
 {
 int fd_from,
-ssize_t r, w;
-char buffer[1024];
+
 
 /** check arguments numbers*/
 if (argc != 3)
