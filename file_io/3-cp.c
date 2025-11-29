@@ -13,7 +13,8 @@
 int main(int argc, char *argv[])
 {
 int fd_from,
-
+ssize_t r, w;
+char buffer[1024];
 
 /** check arguments numbers*/
 if (argc != 3)
@@ -28,4 +29,25 @@ if (fd_from == -1)
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 exit(98);
 }
+fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+if (fd_to == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+close(fd_from);
+exit(99);
+}
+
+/** read bytes and write*/
+while ((r = read(fd_from, buffer, 1024)) > 0)
+{
+w = write(fd_to, buffer, r);
+if (w == -1 || w != r)
+{
+dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+close(fd_from);
+close(fd_to);
+exit(99);
+}
+}
+return (0);
 }
