@@ -58,5 +58,22 @@ close(fd_from);
 close(fd_to);
 exit(98);
 }
+
+/** Close source file */
+c_from = close(fd_from)
+if (c_from == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
+exit(100);
+}
+
+/** Close destination file */
+c_to = close(fd_to);
+if (c_to == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to);
+exit(100);
+}
+
 return (0);
 }
