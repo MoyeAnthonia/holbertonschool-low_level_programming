@@ -36,7 +36,7 @@ i++;
 }
 
 if (temp == NULL)
-return -1;
+return (-1);
 
 if (temp->prev != NULL)
 temp->prev->next = temp->next;
