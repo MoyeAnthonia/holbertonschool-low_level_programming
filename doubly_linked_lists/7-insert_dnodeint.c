@@ -22,7 +22,7 @@ return (NULL);
 
 /**add at head*/
 if (idx == 0)
-return add_dnodeint(h, n);
+return (add_dnodeint(h, n));
 
 while (temp != NULL && i < idx - 1)
 {
@@ -34,7 +34,7 @@ return (NULL);
 
 /**insert at end*/
 if (temp->next == NULL)
-return add_dnodeint_end(h, n);
+return (add_dnodeint_end(h, n));
 
 /**assign memory*/
 new_node = malloc(sizeof(dlistint_t));
