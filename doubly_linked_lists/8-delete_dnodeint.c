@@ -39,7 +39,7 @@ if (temp == NULL)
 return -1;
 
 if (temp->prev != NULL)
-temp->prev->next = temp->prev;
+temp->prev->next = temp->next;
 
 if (temp->next != NULL)
 temp->next->prev = temp->prev;
