@@ -2,7 +2,7 @@
 #include <string.h>
 #include "lists.h"
 /**
- * get_dnodeint_at_index - function returns sum
+ * sum_dlistint - function returns sum
  * of a dlistint list.
  * @head: the nodes
  *
