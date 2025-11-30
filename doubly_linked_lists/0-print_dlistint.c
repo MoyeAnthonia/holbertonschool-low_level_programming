@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * print_dlistint-   function that prints all the elements of a dlistint_t list.
+ * print_dlistint-   function that prints all the elements
+ * of a dlistint_t list.
  * @h: the nodes
  *
  * Return: 0
