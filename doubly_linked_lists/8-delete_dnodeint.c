@@ -2,8 +2,8 @@
 #include <string.h>
 #include "lists.h"
 /**
- * delete_dnodeint_at_index - function returns sum
- * of a dlistint list.
+ * delete_dnodeint_at_index - function that deletes
+ * a dlistint list.
  * @head: the nodes
  * @index: index of nodes.
  *
@@ -11,5 +11,22 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
+dlistint_t *temp = *head;
+/**unsigned int i = 0;*/
 
+if (head == NULL || *head == NULL)
+return (-1);
+ /**delete head first*/
+if (index == 0)
+{
+*head = temp->next;
+if (*head != NULL)
+(*head)->prev = NULL;
+
+free(temp);
+return (1);
+}
+
+free(temp);
+return (1);
 }
