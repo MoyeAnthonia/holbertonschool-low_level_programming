@@ -40,16 +40,11 @@ if (!node)
 return (0);
 
 node->key = strdup(key);
-if (node->key == NULL)
-{
-free(node);
-return (0);
-}
-
 node->value = strdup(value);
-if (node->value == NULL)
+if (node->key == NULL || node->value == NULL)
 {
 free(node->key);
+free(node->value);
 free(node);
 return (0);
 }
