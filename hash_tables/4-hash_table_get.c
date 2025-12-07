@@ -22,7 +22,7 @@ return (NULL);
 index = key_index((const unsigned char *) key, ht->size);
 node = ht->array[index];
 
-while(node)
+while (node != NULL)
 {
 if (strcmp(node->key, key) == 0)
 return (node->value);
