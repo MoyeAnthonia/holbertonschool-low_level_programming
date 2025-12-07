@@ -16,22 +16,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 unsigned long int index;
 hash_node_t *node, *temp;
 
-if (!ht || !key || *key =='\0' || !value)
+if (!ht || !key || *key == '\0' || !value)
 return (0);
 
 index = key_index((const unsigned char *)key, ht->size);
 temp = ht->array[index];
 
 /* check for key*/
-while (temp != NULL)
+while (temp)
 {
 if (strcmp(temp->key, key) == 0)
 {
 free(temp->value);
 temp->value = strdup(value);
-if (temp->value == NULL)
-return (0);
-return (1);
+return (temp->value ? 1 : 0);
 }
 temp = temp->next;
 }
